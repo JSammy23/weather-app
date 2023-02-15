@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>ForeCast</title>
 </head>
 <body>
-    
+    <div id="content">
+        <header>
+            <div class="logo-div">
+                <h1 id="logo">ForeCast</h1>
+            </div>
+            <div class="search-div">
+                <form action="#" id="searchForm">
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text",
+                    name="searchItem"
+                    id="searchItem"
+                    placeholder="Enter zipcode">
+                </form>
+            </div>
+            <!-- Div for recent searchs or controls -->
+        </header>
+        <div id="forecast">
+            <!-- Five day forecast -->
+        </div>
+        <main>
+            <div id="currentWeather">
+                <div class="currentTemp"></div>
+                <div class="tempStats"></div>
+                <div class="currentCity"></div>
+                <div class="detailedWeather"></div>
+            </div>
+            <div id="weatherStatus"></div>
+        </main>
+    </div>
 </body>
 </html>
