@@ -10,7 +10,7 @@ const weather = (() => {
             console.log(weatherData)
         } catch (err) {
             console.error(err)
-            
+            // Throw error to user
         }
     }
 
