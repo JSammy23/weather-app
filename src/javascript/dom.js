@@ -36,6 +36,13 @@ const dom = (() => {
 
     }
 
+    function revealCurrentWeather(){
+        const currentWeather = document.getElementById('currentWeather');
+        currentWeather.classList.remove('hide')
+    }
+
+    
+
 
 
 
@@ -46,7 +53,8 @@ const dom = (() => {
 
 
     return {
-        displayCurrentWeather
+        displayCurrentWeather,
+        revealCurrentWeatherq
     }
 
 })();
