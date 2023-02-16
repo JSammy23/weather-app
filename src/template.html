@@ -32,10 +32,33 @@
         </div>
         <main>
             <div id="currentWeather">
-                <div class="currentTemp"></div>
-                <div class="tempStats"></div>
-                <div class="currentCity"></div>
-                <div class="detailedWeather"></div>
+                <div class="currentTemp">
+                    <p id="currentTemp"></p>
+                    <div class="tempStats">
+                        <p id="relativeTemp"></p>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                
+                <div class="currentCity">
+                    <p id="currentCity"></p>
+                </div>
+                <div class="detailedWeather">
+                    <table>
+                        <tr>
+                            <th>Wind:</th>
+                            <td id="windSpeed"></td>
+                            <th>Sunrise:</th>
+                            <td id="sunrise"></td>
+                        </tr>
+                        <tr>
+                            <th>Gust:</th>
+                            <td id="gust"></td>
+                            <th>Sunset:</th>
+                            <td id="sunset"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="weatherStatus"></div>
         </main>

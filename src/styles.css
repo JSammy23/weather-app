@@ -24,6 +24,12 @@ body {
     background-position: center;
 }
 
+/* General Styles */
+button > svg {
+    pointer-events: none;
+}
+
+
 /* Header */
 
 header {
@@ -60,7 +66,40 @@ header {
     cursor: pointer;
 }
 
-/* General Styles */
-button > svg {
-    pointer-events: none;
+
+
+/* Forecast */
+#forecast {
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
 }
+
+/* Current Weather */
+#currentWeather {
+    color: var(--font-color);
+    max-width: 500px;
+}
+
+#currentTemp {
+    font-size: 7em;
+}
+
+.currentTemp {
+    display: flex;
+}
+
+.tempStats {
+    font-size: 1.5em;
+    margin-top: auto;
+    padding: 0 0 .7em 1em;
+}
+
+.currentCity {
+    font-size: 5em;
+}
+
+table {
+    width: 100%;
+}
+
+
