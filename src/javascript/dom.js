@@ -1,4 +1,12 @@
 import weather from "./weather";
+import sun from '../assets/icons/sun.png'
+import storm from '../assets/icons/storm.png'
+import snow from '../assets/icons/snow.png'
+import rain from '../assets/icons/rain.png'
+import cloudy from '../assets/icons/cloudy.png'
+import scatteredClouds from '../assets/icons/scatteredClouds.png'
+import lightClouds from '../assets/icons/lightClouds.png'
+import foggy from '../assets/icons/foggy.png'
 
 const dom = (() => {
     function displayCurrentWeather(weatherData) {
@@ -41,6 +49,68 @@ const dom = (() => {
         currentWeather.classList.remove('hide')
     }
 
+    function getIcon(weatherData) { // Not implemented 
+        const iconCode = weatherData.weather.icon;
+        switch(iconCode){
+            case '01d':
+                return sun
+                break;
+            case '02d':
+                return lightClouds
+                break;
+            case '03d':
+                return scatteredClouds
+                break;
+            case '04d':
+                return cloudy
+                break;
+            case '09d':
+                return rain
+                break;
+            case '10d':
+                return rain
+                break;
+            case '11d':
+                return storm
+                break;
+            case '13d':
+                return snow
+                break;
+            case '50d':
+                return foggy
+                break;
+
+        };
+    }
+
+    function displayForecast(forecastData) {
+        const forecastDiv = document.getElementById('forecast')
+        const forecastWrapper = document.getElementById('forecastWrapper')
+
+        for (let i = 0; i < forecastData.list.length; i++) {
+            const forecastCard = document.createElement('div')
+            const status = document.createElement('p')
+            const temp = document.createElement('p')
+            const timestamp = document.createElement('p')
+
+
+            status.classList.add('status')
+            status.textContent = forecastData.list[i].weather[0].description;
+
+            temp.textContent = forecastData.list[i].main.temp;
+            
+            const datestamp = new Date(forecastData.list[i].dt * 1000)
+            const time = datestamp.toLocaleTimeString();
+            timestamp.textContent = time
+
+            forecastCard.classList.add('forecast-card')
+            forecastCard.append(status)
+            forecastCard.append(temp)
+            forecastCard.append(timestamp)
+            forecastWrapper.append(forecastCard)
+        }
+    }
+
     
 
 
@@ -54,7 +124,8 @@ const dom = (() => {
 
     return {
         displayCurrentWeather,
-        revealCurrentWeatherq
+        revealCurrentWeather,
+        displayForecast
     }
 
 })();

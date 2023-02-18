@@ -76,12 +76,47 @@ header {
 #forecast {
     background-color: rgba(0, 0, 0, .4);
     width: 100%;
+    height: clamp(3em, 8em, 10em);
+    overflow: hidden;
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+}
+
+#forecastWrapper {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+#forecastWrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.forecast-card {
+    border-right: 3px solid var(--font-color);
+    padding-right: 2em;
+    text-align: center;
 }
 
 /* Current Weather */
 #currentWeather {
     color: var(--font-color);
     max-width: 500px;
+    margin-top: clamp(3em, 15em, 18em );
+    padding-left: 3em;
 }
 
 #currentTemp {
