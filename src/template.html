@@ -29,9 +29,11 @@
         </header>
         <div id="forecast">
             <!-- Five day forecast -->
+            <div id="forecastWrapper">
+            </div>
         </div>
         <main>
-            <div id="currentWeather">
+            <div id="currentWeather" class="hide">
                 <div class="currentTemp">
                     <p id="currentTemp"></p>
                     <div class="tempStats">
@@ -60,7 +62,11 @@
                     </table>
                 </div>
             </div>
-            <div id="weatherStatus"></div>
+            <div id="weatherStatus">
+                <div class="weather-icon-div">
+                    <img src={getIcon(weatherData)} alt="">
+                </div>
+            </div>
         </main>
     </div>
 </body>
