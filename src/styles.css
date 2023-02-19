@@ -33,6 +33,11 @@ button > svg {
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
 
 /* Header */
 
@@ -42,6 +47,15 @@ header {
     display: flex;
     align-items: center;
     height: 3.5rem;
+}
+
+#logo {
+    padding-left: 1em;
+}
+
+.link {
+    padding-right: 1em;
+    font-size: 1.5em;
 }
 
 .search-div {
