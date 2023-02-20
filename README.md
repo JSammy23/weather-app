@@ -7,7 +7,10 @@
 I made this weather app for the odin project using openweather's api.
 While holding shift you can scroll through the five daay forecast at the top in three hour increments. 
 
+Mobile support to be added soon.
 
+## Live Preview
+    https://jsammy23.github.io/weather-app/
 
 
 Icon Credits:
