@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeCast</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="content">
+        <header>
+            <div class="logo-div">
+                <h1 id="logo">ForeCast</h1>
+            </div>
+            <div class="search-div">
+                <form action="#" id="searchForm">
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text",
+                    name="searchItem"
+                    id="searchItem"
+                    placeholder="Enter zipcode">
+                </form>
+            </div>
+            <div class="link">
+                <a href="https://github.com/JSammy23/weather-app" target="_blank">
+                    JSammy23 <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </header>
+        <div id="forecast">
+            <!-- Five day forecast -->
+            <div id="forecastWrapper">
+            </div>
+        </div>
+        <main>
+            <div id="currentWeather" class="hide">
+                <div class="currentTemp">
+                    <p id="currentTemp"></p>
+                    <div class="tempStats">
+                        <p id="relativeTemp"></p>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                
+                <div class="currentCity">
+                    <p id="currentCity"></p>
+                </div>
+                <div class="detailedWeather">
+                    <table>
+                        <tr>
+                            <th>Wind:</th>
+                            <td id="windSpeed"></td>
+                            <th>Sunrise:</th>
+                            <td id="sunrise"></td>
+                        </tr>
+                        <tr>
+                            <th>Gust:</th>
+                            <td id="gust"></td>
+                            <th>Sunset:</th>
+                            <td id="sunset"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="weatherStatus">
+                <div class="weather-icon-div">
+                    <img src='' id="icon" >
+                </div>
+                <div id="currentStatusDiv">
+                    <p id="currentStatus"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
