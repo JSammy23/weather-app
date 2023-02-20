@@ -20,8 +20,8 @@ const dom = (() => {
         const sunset = document.getElementById('sunset');
 
         // Temp Stats
-        currentTemp.textContent = weatherData.main.temp
-        relativeTemp.textContent = 'Feels like ' + weatherData.main.feels_like
+        currentTemp.textContent = Math.round(weatherData.main.temp)
+        relativeTemp.textContent = 'Feels like ' + Math.round(weatherData.main.feels_like)
         humidity.textContent = 'Humidity ' + weatherData.main.humidity
 
         // City
@@ -49,8 +49,23 @@ const dom = (() => {
         currentWeather.classList.remove('hide')
     }
 
-    function getIcon(weatherData) { // Not implemented 
-        const iconCode = weatherData.weather.icon;
+    function displayWeatherIcon(weatherData) {
+        const weatherIcon = document.getElementById('icon')
+        const currentStatus = document.getElementById('currentStatusDiv')
+        const iconCode = weatherData.weather[0].icon;
+        const status = weatherData.weather[0].description
+        const statusText = document.getElementById('currentStatus')
+
+        statusText.textContent = '';
+        statusText.textContent = status
+        
+
+        
+        weatherIcon.src = getIcon(iconCode);
+
+    }
+
+    function getIcon(iconCode) { 
         switch(iconCode){
             case '01d':
                 return sun
@@ -86,6 +101,7 @@ const dom = (() => {
     function displayForecast(forecastData) {
         const forecastDiv = document.getElementById('forecast')
         const forecastWrapper = document.getElementById('forecastWrapper')
+        forecastWrapper.textContent = ''
 
         for (let i = 0; i < forecastData.list.length; i++) {
             const forecastCard = document.createElement('div')
@@ -97,7 +113,7 @@ const dom = (() => {
             status.classList.add('status')
             status.textContent = forecastData.list[i].weather[0].description;
 
-            temp.textContent = forecastData.list[i].main.temp;
+            temp.textContent = Math.round(forecastData.list[i].main.temp);
             
             const datestamp = new Date(forecastData.list[i].dt * 1000)
             const time = datestamp.toLocaleTimeString();
@@ -125,7 +141,8 @@ const dom = (() => {
     return {
         displayCurrentWeather,
         revealCurrentWeather,
-        displayForecast
+        displayForecast,
+        displayWeatherIcon
     }
 
 })();

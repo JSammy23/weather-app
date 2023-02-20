@@ -12,19 +12,14 @@ const weather = (() => {
             dom.displayCurrentWeather(weatherData)
             dom.revealCurrentWeather()
             getForecast(zipcode)
+            dom.displayWeatherIcon(weatherData)
         } catch (err) {
             console.error(err)
             // Throw error to user
         }
     }
 
-    async function getWeatherIcon(weatherData) {
-        const iconCode = weatherData.weather.icon;
-        
-        // Where will I call img.src?
-        // When will I dynamically create img?
-        // When will I call this function?
-    }
+   
 
 
     async function getForecast(zipcode) {
