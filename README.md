@@ -10,7 +10,7 @@ While holding shift you can scroll through the five daay forecast at the top in 
 Mobile support to be added soon.
 
 ## Live Preview
-    https://jsammy23.github.io/weather-app/
+https://jsammy23.github.io/weather-app/
 
 
 Icon Credits:
