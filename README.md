@@ -1,10 +1,11 @@
 # Weather App by JSammy23
 
 
-image.png
+![Alt text](/src/assets/sample.pngraw=true "Preview Screenshot")
 
 
-
+I made this weather app for the odin project using openweather's api.
+While holding shift you can scroll through the five daay forecast at the top in three hour increments. 
 
 
 
